@@ -1,0 +1,146 @@
+body {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	overflow-y: hidden;
+	height: 100vh;
+}
+:root {
+	--primary-color: #000;
+	--secondary-color: #878787;
+}
+.container {
+	display: flex;
+}
+.left {
+	padding: 1rem 0;
+	flex: 1;
+	padding-left: 0;
+	overflow-y: auto;
+	height: 100vh;
+}
+.right {
+	padding: 1rem 0;
+	padding-top: 0;
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+	overflow-y: none;
+}
+.right > .chat-box {
+	flex: 1;
+	background-color: #f1f3f6;
+	padding: 10px;
+	position: relative;
+	gap: 10px;
+	display: flex;
+	flex-direction: column;
+	overflow-y: scroll;
+}
+.filter-header {
+	padding-bottom: 10px;
+	margin-left: 10px;
+	position: sticky;
+	top: 0;
+	z-index: 20;
+}
+.filter-heading {
+	color: #212121;
+	margin: 10px;
+	margin-left: 0;
+	margin-top: 0;
+}
+.filter-header > input[type="text"] {
+	outline: none;
+	border: none;
+	padding: 2px 10px;
+	border-bottom: 2px solid #000;
+	color: var(--secondary-color);
+}
+.filter-header > input[type="text"]::placeholder {
+	color: var(--secondary-color);
+}
+
+.chat-item {
+	display: flex;
+	position: relative;
+	align-items: center;
+	gap: 1rem;
+	color: var(--primary-color);
+	cursor: pointer;
+	padding: 10px;
+	border-top: 1px solid #f0f0f0;
+}
+.chat-item.active {
+	background-color: #f1f3f6;
+}
+.chat-item-content {
+	flex: 1;
+}
+.chat-item > .timestamp {
+	position: absolute;
+	top: 10px;
+	right: 5px;
+	color: var(--secondary-color);
+	margin: 0;
+	font-size: 0.8rem;
+}
+.chat-item-msg {
+	color: var(--secondary-color);
+	font-size: 1rem;
+}
+
+.chat-header {
+	display: flex;
+	gap: 1rem;
+	align-items: center;
+	border: 1px solid #f0f0f0;
+	padding-bottom: 1rem;
+	padding-left: 10px;
+}
+.chat-header > h2 {
+	flex: 1;
+}
+.chat-box.no-message > p {
+	position: absolute;
+	top: 50%;
+	left: 0;
+	right: 0;
+	text-align: center;
+}
+form {
+	display: flex;
+	padding: 10px;
+}
+form > input {
+	flex: 1;
+	outline: none;
+	padding: 10px;
+	border: none;
+}
+
+.message {
+	padding: 10px;
+	width: fit-content;
+	max-width: 60%;
+	background-color: #fff;
+	border-radius: 10px;
+	font-size: 14px;
+}
+.message.human {
+	margin-left: auto;
+	text-align: right;
+	background-color: #027cd5;
+	color: #fff;
+}
+
+.message > .timestamp {
+	display: block;
+	width: 100%;
+	margin-left: auto;
+	text-align: right;
+}
+.chat-list {
+	margin-bottom: 50px;
+}
