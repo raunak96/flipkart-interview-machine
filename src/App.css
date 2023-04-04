@@ -16,6 +16,7 @@ body {
 	padding: 1rem 0;
 	flex: 1;
 	padding-left: 0;
+	padding-top: 0;
 	overflow-y: auto;
 	height: 100vh;
 }
@@ -36,12 +37,14 @@ body {
 	gap: 10px;
 	display: flex;
 	flex-direction: column;
-	overflow-y: scroll;
+	overflow-y: auto;
 }
 .filter-header {
+	padding-top: 10px;
 	padding-bottom: 10px;
 	margin-left: 10px;
 	position: sticky;
+	background-color: #fff;
 	top: 0;
 	z-index: 20;
 }
@@ -143,4 +146,11 @@ form > input {
 }
 .chat-list {
 	margin-bottom: 50px;
+}
+.opMsg {
+	background-color: #f5f5f5;
+	padding: 10px;
+}
+.opMsg p {
+	color: #027cd5;
 }

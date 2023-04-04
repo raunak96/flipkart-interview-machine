@@ -6,7 +6,7 @@ const RightUi = ({ chat, setData, data }) => {
 	return (
 		<div className="right">
 			<ChatHeader image={chat.imageURL} heading={chat.title} />
-			<ChatBox chat={chat} />
+			<ChatBox chat={chat} setData={setData} />
 			<ChatInput setData={setData} data={data} chat={chat} />
 		</div>
 	);

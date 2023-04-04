@@ -10,6 +10,7 @@ const LeftUi = ({ chatList, selectChat, selectedChat }) => {
 			list => list.title.includes(input) || list.orderId.includes(input)
 		);
 	}, [chatList, input]);
+
 	return (
 		<div className="left">
 			<ChatFilter chatList={chatList} input={input} setInput={setInput} />

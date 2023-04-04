@@ -22,6 +22,7 @@ const ChatInput = ({ setData, data, chat }) => {
 			});
 			return chats;
 		});
+		setInput("");
 	};
 	return (
 		<form onSubmit={handleSubmit}>

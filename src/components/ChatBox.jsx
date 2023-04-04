@@ -1,6 +1,6 @@
 import Message from "./Message";
 
-const ChatBox = ({ chat }) => {
+const ChatBox = ({ chat, setData }) => {
 	return (
 		<div
 			className={`chat-box ${
@@ -11,6 +11,8 @@ const ChatBox = ({ chat }) => {
 					<Message
 						key={messageObj.timestamp}
 						messageObj={messageObj}
+						setData={setData}
+						chat={chat}
 					/>
 				))
 			) : (
